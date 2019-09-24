@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><script src=/socket.io/socket.io.js></script>
+    <script>
+    var socket = io('http://localhost:3000');
+    socket.on('visits', function(visitas){
+      document.getElementById('visitas').innerHTML = visitas;
+    });
+    </script>
+  </head>
+  <body>
+    <p>Contador de jogadores online com Socket.io</p>
+    <p>Numero de jogadores online: <span id="visitas">0</span></p>
+  </body>
+</html>
